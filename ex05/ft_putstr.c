@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crjarill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: crjarill <crjarill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/09 11:32:58 by crjarill          #+#    #+#             */
-/*   Updated: 2024/07/09 11:33:05 by crjarill         ###   ########.fr       */
+/*   Created: 2024/07/10 10:33:06 by crjarill          #+#    #+#             */
+/*   Updated: 2024/07/10 14:50:31 by crjarill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-int ft_strlen(char *str)
+void	ft_putstr(char *str)
 {
-	int i=0;
-	
+	char	c;
+	int		i;
 
-	while(str[i]!='\0')
+	while (str[i] != ' \0 ' )
 	{
+		c = str[i];
+		write(1, &c, 1);
 		i++;
-
 	}
-
-	return i;
-}
-
-int main (){
-
-	char c[]="hola";
-	int i=ft_strlen(c);
-	printf("Valor %d",i);
 }
